@@ -4,6 +4,26 @@ class RomanNumber
 {
     public static function decimalToRoman(int $n) : String
     {
+        // On remarque que certains cas sont des cas "immuables", dans le sens ou ces valeurs ne se retrouvent nul part ailleurs (un peu comme des chiffres premiers)
+        // Pour résoudre ce problème, on stocke tous les cas "immuables" dans un tableau
+        // Les valeurs seront triés par ordre décroissant car, pour écrire un chiffre décimal en romain, on commence toujours par le chiffre le plus grand en premier suivi des autres
+        
+        $romanNumberFix = array(
+            'M' => 1000,
+            'CM' => 900,
+            'D' => 500,
+            'CD' => 400,
+            'C' => 100,
+            'XC' => 90,
+            'L' => 50,
+            'XL' => 40,
+            'X' => 10,
+            'IX' => 9,
+            'V' => 5,
+            'IV' => 4,
+            'I' => 1
+        );
+
         $romanNumber = "";
         
         if ($n == 0) {
