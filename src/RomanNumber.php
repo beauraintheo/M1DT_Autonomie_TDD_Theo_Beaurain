@@ -80,12 +80,13 @@ class RomanNumber
     {
         $decimalNumber = 0;
 
-        if ($romanNumber == "I") {
-            $decimalNumber = 1;
-        } else if ($romanNumber == "II") {
-            $decimalNumber = 2;
-        } else if ($romanNumber == "III") {
-            $decimalNumber = 3;
+        if ($romanNumber <= "III") {
+            $countI = substr_count($romanNumber, "I");
+            $decimalNumber += $countI;
+        } else if ($romanNumber == "IV") {
+            $decimalNumber = 4;
+        } else if ($romanNumber == "V") {
+            $decimalNumber = 5;
         }
 
         return $decimalNumber;

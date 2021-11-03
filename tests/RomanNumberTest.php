@@ -136,15 +136,15 @@ final class RomanNumberTest extends TestCase
         $this->assertEquals(3, RomanNumber::romanToDecimal("III"));
     }
 
-    // public function testRomanToDecimal4()
-    // {
-    //     $this->assertEquals(4, RomanNumber::romanToDecimal("IV"));
-    // }
+    public function testRomanToDecimal4()
+    {
+        $this->assertEquals(4, RomanNumber::romanToDecimal("IV"));
+    }
 
-    // public function testRomanToDecimal5()
-    // {
-    //     $this->assertEquals(5, RomanNumber::romanToDecimal("V"));
-    // }
+    public function testRomanToDecimal5()
+    {
+        $this->assertEquals(5, RomanNumber::romanToDecimal("V"));
+    }
 
     // public function testRomanToDecimal6()
     // {
