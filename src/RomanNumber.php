@@ -22,6 +22,10 @@ class RomanNumber
             for ($i = 6; $i <= $n; $i++) {
                 $romanNumber .= "I";
             }
+        } else if ($n == 9) {
+            $romanNumber = "IX";
+        } else if ($n == 10) {
+            $romanNumber = "X";
         }
         return $romanNumber;
     }
