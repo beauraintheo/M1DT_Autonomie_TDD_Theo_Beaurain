@@ -2,6 +2,9 @@
 
 class RomanNumber
 {
+    // Fonction permettant de transformer un nombre décimal en nombre romain, si celui-ci est compris entre 0 et 3000
+    // Si celui-ci n'est pas compris dans la borne, retourne ""
+
     public static function decimalToRoman(int $n) : String
     {
         // On remarque que certains cas sont des cas "immuables", dans le sens ou ces valeurs ne se retrouvent nul part ailleurs (un peu comme des chiffres premiers)
@@ -28,20 +31,22 @@ class RomanNumber
         // Si $n > 0 et que $n <= 3000, alors on concatènera à ce string le nombre de caractères romains correspondant pour avoir le bon résultat à la fin
         $romanNumber = "";
 
-        // Lors de ce for, on parcourt le tableau de nos différents cas "immuables"
-        // A chaque fois qu'une occurence sera trouvée dans le chiffre que l'on cherche à atteindre, on ajoutera la lettre correspondante pour traduire notre chiffre de l'état décimal à l'état romain
+        if ($n > 0 && $n <= 3000) {
+            // Lors de ce for, on parcourt le tableau de nos différents cas "immuables"
+            // A chaque fois qu'une occurence sera trouvée dans le chiffre que l'on cherche à atteindre, on ajoutera la lettre correspondante pour traduire notre chiffre de l'état décimal à l'état romain
 
-        foreach ($romanNumberFix as $romanLetter => $value) {
-            // Permet de savoir le nombre de fois qu'une occurence de notre tableau apparaît dans notre valeur initiale
-            // Exemple : Si $n = 3000, $numbersOfOccFound = 3
-            $numbersOfOccFound = intval($n / $value);
+            foreach ($romanNumberFix as $romanLetter => $value) {
+                // Permet de savoir le nombre de fois qu'une occurence de notre tableau apparaît dans notre valeur initiale
+                // Exemple : Si $n = 3000, $numbersOfOccFound = 3
+                $numbersOfOccFound = intval($n / $value);
 
-            // Utilisation de str_repeat pour répéter X fois la lettre romaine, en fonction du nombres d'occurences trouvées précédemment
-            // Exemple : Si $n = 3000, $romanNumber = MMM
-            $romanNumber .= str_repeat($romanLetter, $numbersOfOccFound);
+                // Utilisation de str_repeat pour répéter X fois la lettre romaine, en fonction du nombres d'occurences trouvées précédemment
+                // Exemple : Si $n = 3000, $romanNumber = MMM
+                $romanNumber .= str_repeat($romanLetter, $numbersOfOccFound);
 
-            // Utilisation du modulo afin de pouvoir continuer à écrire notre nombre en caractères romains, si nécessaire
-            $n %= $value;
+                // Utilisation du modulo afin de pouvoir continuer à écrire notre nombre en caractères romains, si nécessaire
+                $n %= $value;
+            }
         }
         return $romanNumber;
         
@@ -65,6 +70,6 @@ class RomanNumber
         //     $romanNumber = "IX";
         // } else if ($n == 10) {
         //     $romanNumber = "X";
-        // }
+        // } ...
     }
 }

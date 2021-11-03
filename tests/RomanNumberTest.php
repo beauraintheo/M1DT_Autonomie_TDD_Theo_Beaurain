@@ -103,4 +103,9 @@ final class RomanNumberTest extends TestCase
     {
         $this->assertEquals("", RomanNumber::decimalToRoman(3001));
     }
+
+    public function testDecimalToRoman7500()
+    {
+        $this->assertEquals("", RomanNumber::decimalToRoman(7500));
+    }
 }
