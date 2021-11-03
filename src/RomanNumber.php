@@ -78,6 +78,10 @@ class RomanNumber
 
     public static function romanToDecimal(String $romanNumber) : int
     {
+
+        // Méthode incomplète, seulement les cas de 0 à 5 sont fonctionnels
+        // Je n'ai pas eu le temps de faire les cas supérieurs, mais la technique pour les réaliser aurait été de faire des count() pour chaque lettre de notre programme et de les ajouter, en fonction de leur valeur à notre valeur de retour
+
         $decimalNumber = 0;
 
         if ($romanNumber <= "III") {
