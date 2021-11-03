@@ -72,4 +72,14 @@ class RomanNumber
         //     $romanNumber = "X";
         // } ...
     }
+
+    // Fonction permettant de transformer un nombre romain en nombre décimal, si celui-ci est compris entre 0 et 3000
+    // Si celui-ci n'est pas compris dans la borne, retourne 0
+
+    public static function romanToDecimal(String $romanNumber) : int
+    {
+        $decimalNumber = 0;
+
+        return $decimalNumber;
+    }
 }

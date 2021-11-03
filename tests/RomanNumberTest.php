@@ -4,6 +4,8 @@ use PHPUnit\Framework\TestCase;
 
 final class RomanNumberTest extends TestCase
 {
+    /* ===== TEST FOR decimalToRoman ===== */
+
     public function testDecimalToRoman0()
     {
         $this->assertEquals("", RomanNumber::decimalToRoman(0));
@@ -108,4 +110,116 @@ final class RomanNumberTest extends TestCase
     {
         $this->assertEquals("", RomanNumber::decimalToRoman(7500));
     }
+
+    /* ===== END OF TEST FOR decimalToRoman ===== */
+
+
+    /* ===== TEST FOR romanToDecimal ===== */
+
+    // public function testRomanToDecimal0()
+    // {
+    //     $this->assertEquals(0, RomanNumber::romanToDecimal(""));
+    // }
+
+    // public function testRomanToDecimal1()
+    // {
+    //     $this->assertEquals(1, RomanNumber::romanToDecimal("I"));
+    // }
+
+    // public function testRomanToDecimal2()
+    // {
+    //     $this->assertEquals(2, RomanNumber::romanToDecimal("II"));
+    // }
+
+    // public function testRomanToDecimal3()
+    // {
+    //     $this->assertEquals(3, RomanNumber::romanToDecimal("III"));
+    // }
+
+    // public function testRomanToDecimal4()
+    // {
+    //     $this->assertEquals(4, RomanNumber::romanToDecimal("IV"));
+    // }
+
+    // public function testRomanToDecimal5()
+    // {
+    //     $this->assertEquals(5, RomanNumber::romanToDecimal("V"));
+    // }
+
+    // public function testRomanToDecimal6()
+    // {
+    //     $this->assertEquals(6, RomanNumber::romanToDecimal("VI"));
+    // }
+
+    // public function testRomanToDecimal7()
+    // {
+    //     $this->assertEquals(7, RomanNumber::romanToDecimal("VII"));
+    // }
+
+    // public function testRomanToDecimal8()
+    // {
+    //     $this->assertEquals(8, RomanNumber::romanToDecimal("VIII"));
+    // }
+
+    // public function testRomanToDecimal9()
+    // {
+    //     $this->assertEquals(9, RomanNumber::romanToDecimal("IX"));
+    // }
+
+    // public function testRomanToDecimal10()
+    // {
+    //     $this->assertEquals(10, RomanNumber::romanToDecimal("X"));
+    // }
+
+    // public function testRomanToDecimal47()
+    // {
+    //     $this->assertEquals(47, RomanNumber::romanToDecimal("XLVII"));
+    // }
+
+    // public function testRomanToDecimal94()
+    // {
+    //     $this->assertEquals(94, RomanNumber::romanToDecimal("XCIV"));
+    // }
+
+    // public function testRomanToDecimal157()
+    // {
+    //     $this->assertEquals(157, RomanNumber::romanToDecimal("CLVII"));
+    // }
+
+    // public function testRomanToDecimal955()
+    // {
+    //     $this->assertEquals(955, RomanNumber::romanToDecimal("CMLV"));
+    // }
+
+    // public function testRomanToDecimal1058()
+    // {
+    //     $this->assertEquals(1058, RomanNumber::romanToDecimal("MLVIII"));
+    // }
+
+    // public function testRomanToDecimal2037()
+    // {
+    //     $this->assertEquals(2037, RomanNumber::romanToDecimal("MMXXXVII"));
+    // }
+
+    // public function testRomanToDecimal2944()
+    // {
+    //     $this->assertEquals(2944, RomanNumber::romanToDecimal("MMCMXLIV"));
+    // }
+
+    // public function testRomanToDecimal3000()
+    // {
+    //     $this->assertEquals(3000, RomanNumber::romanToDecimal("MMM"));
+    // }
+
+    // public function testRomanToDecimal3001()
+    // {
+    //     $this->assertEquals(0, RomanNumber::romanToDecimal("MMMI"));
+    // }
+
+    // public function testRomanToDecimal7500()
+    // {
+    //     $this->assertEquals(0, RomanNumber::romanToDecimal("MMMMMMMD"));
+    // }
+
+    /* ===== END OF TEST FOR romanToDecimal ===== */
 }
