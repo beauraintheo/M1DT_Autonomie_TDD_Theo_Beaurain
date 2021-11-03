@@ -6,25 +6,23 @@ class RomanNumber
     {
         $romanNumber = "";
         
-        if ($n === 0)
+        if ($n == 0) {
             return $romanNumber;
+        } else if ($n <= 3) {
+            for ($i = 1; $i <= $n; $i++) {
+                $romanNumber .= "I";
+            }
+        } else if ($n == 4) {
+            $romanNumber = "IV";
+        } else if ($n == 5) {
+            $romanNumber = "V";
+        } else if ($n <= 8) {
+            $romanNumber = "V";
 
-        for ($i = 1; $i <= $n; $i++) {
-            $romanNumber .= "I";
+            for ($i = 6; $i <= $n; $i++) {
+                $romanNumber .= "I";
+            }
         }
-        
         return $romanNumber;
-
-        // if ($n === 0)
-        //     return "";
-
-        // if ($n === 1)
-        //     return "I";
-
-        // if ($n === 2)
-        //     return "II";
-
-        // if ($n === 3)
-        //     return "III";
     }
 }
