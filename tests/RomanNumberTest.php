@@ -59,43 +59,48 @@ final class RomanNumberTest extends TestCase
         $this->assertEquals("X", RomanNumber::decimalToRoman(10));
     }
 
-    // public function testDecimalToRoman47()
-    // {
-    //     $this->assertEquals("", RomanNumber::decimalToRoman(47));
-    // }
+    public function testDecimalToRoman47()
+    {
+        $this->assertEquals("XLVII", RomanNumber::decimalToRoman(47));
+    }
 
-    // public function testDecimalToRoman94()
-    // {
-    //     $this->assertEquals("", RomanNumber::decimalToRoman(94));
-    // }
+    public function testDecimalToRoman94()
+    {
+        $this->assertEquals("XCIV", RomanNumber::decimalToRoman(94));
+    }
 
-    // public function testDecimalToRoman157()
-    // {
-    //     $this->assertEquals("", RomanNumber::decimalToRoman(157));
-    // }
+    public function testDecimalToRoman157()
+    {
+        $this->assertEquals("CLVII", RomanNumber::decimalToRoman(157));
+    }
 
-    // public function testDecimalToRoman755()
-    // {
-    //     $this->assertEquals("", RomanNumber::decimalToRoman(755));
-    // }
+    public function testDecimalToRoman955()
+    {
+        $this->assertEquals("CMLV", RomanNumber::decimalToRoman(955));
+    }
 
-    // public function testDecimalToRoman1058()
-    // {
-    //     $this->assertEquals("", RomanNumber::decimalToRoman(1058));
-    // }
+    public function testDecimalToRoman1058()
+    {
+        $this->assertEquals("MLVIII", RomanNumber::decimalToRoman(1058));
+    }
 
-    // public function testDecimalToRoman2035()
-    // {
-    //     $this->assertEquals("", RomanNumber::decimalToRoman(2035));
-    // }
+    public function testDecimalToRoman2037()
+    {
+        $this->assertEquals("MMXXXVII", RomanNumber::decimalToRoman(2037));
+    }
 
-    // public function testDecimalToRoman3000()
-    // {
-    //     $this->assertEquals("", RomanNumber::decimalToRoman(3000));
-    // }
+    public function testDecimalToRoman2944()
+    {
+        $this->assertEquals("MMCMXLIV", RomanNumber::decimalToRoman(2944));
+    }
 
-    // public function testDecimalToRoman3001()
-    // {
-    //     $this->assertEquals(false, RomanNumber::decimalToRoman(3001));
-    // }
+    public function testDecimalToRoman3000()
+    {
+        $this->assertEquals("MMM", RomanNumber::decimalToRoman(3000));
+    }
+
+    public function testDecimalToRoman3001()
+    {
+        $this->assertEquals("", RomanNumber::decimalToRoman(3001));
+    }
 }
